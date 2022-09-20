@@ -46,9 +46,8 @@ pickBtn.addEventListener("click", () => {
 // Register Service Worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("../sw.js")
-    .then(() => console.log("SW Registered"));
-}
+    .register("/eyedropper-pwa/sw.js");
+    }
 
 let installPrompt;
 const installBtn = document.querySelector("#install-pwa");
