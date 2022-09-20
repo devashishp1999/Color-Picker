@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+        border-radius: 10px;
+        /* overflow: hidden; */
+
+        position: relative;
+      }
+
+      .container-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 10px;
+        /* background-color: #00000030; */
+        /* backdrop-filter: blur(3px); */
+        /* color: #fff !important; */
+        /* border: 2px solid #fff; */
+
+        box-shadow: 0 0 10px -3px black;
+      }
+
+      .result-color {
+        width: 40px;
+        height: 40px;
+        border-radius: 9px;
+        box-shadow: 0 0 5px -2px black;
+      }
+
+      .result-text {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .result-text button {
+        cursor: pointer;
+      }
+
+      .btn {
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 7px;
+        background-color: #303030;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button:active {
+        scale: 0.97;
+      }
+
+      #install-pwa {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+        border: 2px solid #303030;
+        color: #303030;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-bg"></div>
+      <h2>Instant Eye-dropper</h2>
+      <span class="result-color">
+        <!--  -->
+      </span>
+      <span class="result-text">
+        <span>#ffffff</span
+        ><button id="copy-to-clipboard" title="Copy to clipboard">
+          copy
+        </button></span
+      >
+      <button class="btn" id="clrpick">Pick color</button>
+      <button class="btn" id="install-pwa">Install App</button>
+    </div>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
