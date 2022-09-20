@@ -4,7 +4,7 @@ self.addEventListener("install", (e) => {
     caches
       .open("color-pwa")
       .then((cache) =>
-        cache.addAll(["/", "/index.html", "/src/index.js", "/src/method.js"])
+        cache.addAll(["/", "/index.html", "/src/index.js", "/src/method.js", "https://raw.githubusercontent.com/devashishp1999/eyedropper-pwa/main/sw.js"])
       )
   );
 });
