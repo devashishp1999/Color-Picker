@@ -1,4 +1,4 @@
-### color-picker
+### Screen color-picker
 <br />
 
 • Pick Any color from your screen.
