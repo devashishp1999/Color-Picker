@@ -32,9 +32,11 @@ pickBtn.addEventListener("click", () => {
     .then((result) => {
       let color = result.sRGBHex;
 
-      color = color.slice(color[0], color.lastIndexOf(",")).replace("a", "");
-      color += ")";
-      color = rgbToHex(color);
+      if (color.startsWith("rgb")){
+        color = color.slice(color[0], color.lastIndexOf(",")).replace("a", "");
+        color += ")";
+        color = rgbToHex(color);
+      }
 
       colorBox.style.backgroundColor = color;
       colorPicked = color;
@@ -46,8 +48,9 @@ pickBtn.addEventListener("click", () => {
 // Register Service Worker
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/eyedropper-pwa/sw.js");
-    }
+    .register("../sw.js")
+    .then(() => console.log("SW Registered"));
+}
 
 let installPrompt;
 const installBtn = document.querySelector("#install-pwa");
