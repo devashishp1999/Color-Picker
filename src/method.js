@@ -1,7 +1,7 @@
 /**
  * @function Converts rgb-code to hex-c0de
  * @param {String} rgb format : rgb(r, g, b)
- * @returns #rgb HEX-Code
+ * @returns #rrggbb HEX-Code
  */
 export function rgbToHex(rgb) {
   if (rgb.startsWith("#")) return rgb;
